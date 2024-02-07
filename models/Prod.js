@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 const ProdSchema = new mongoose.Schema({
+  prod_id: {
+    type: String,
+  },
   prod_name: {
     type: String,
   },
@@ -13,5 +16,4 @@ const ProdSchema = new mongoose.Schema({
     typ: Number,
   },
 });
-
-module.exports.Prod = mongoose.model("Prod", ProdSchema);
+export const Prod = mongoose.model("Prod", ProdSchema);
